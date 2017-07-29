@@ -68,10 +68,6 @@ def fun5_2(fun):
     print("【函数接受函数参数】", "我去买火车票!")
     fun()
 
-def fun6():
-    """装饰器
-    """
-    pass
 
 # fun1("jack")
 # fun2()
