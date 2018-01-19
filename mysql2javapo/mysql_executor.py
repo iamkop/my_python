@@ -15,13 +15,9 @@ class MysqlExecutor:
 
         return cursor
 
-    def column_count(self, sql):
-        """获取表信息: 列数量"""
-        return len(self._do_execute(sql).fetchall())
-
-    def create_table_sql(self, sql):
-        """获取表信息: 建表语句"""
-        return self._do_execute(sql).fetchone()[1]
+    def get_columns(self, sql):
+        """获取列信息"""
+        return self._do_execute(sql).fetchall()
 
     def close(self):
         """关闭mysql连接"""
